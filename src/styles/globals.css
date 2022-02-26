@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .group:hover .group-hover\:block {
+    display: block !important;
+  }
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+  .amazon_button {
+    @apply rounded-sm border border-yellow-300 bg-gradient-to-b from-yellow-200 to-yellow-400 p-2 text-xs transition duration-300 hover:from-yellow-300 hover:to-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 active:scale-110 active:bg-yellow-500 md:text-sm;
+  }
+  .amazon_delete_button {
+    @apply rounded-sm border border-red-300 bg-gradient-to-b from-red-200 to-red-400 p-2 text-xs transition duration-300 hover:from-red-300 hover:to-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 active:scale-110 active:bg-red-500 md:text-sm;
+  }
+  .footer_items {
+    @apply cursor-pointer text-[15px] text-gray-400 hover:text-gray-200 hover:underline;
+  }
+  .sidebar_sub_items {
+    @apply cursor-pointer transition-transform duration-300 hover:translate-x-3 hover:font-semibold hover:text-black;
+  }
+  .adminsidebarlink {
+    @apply flex w-full cursor-pointer flex-col items-center space-y-1 p-1 md:flex-row  md:space-x-5;
+  }
+  .formlabel {
+    @apply text-xs font-semibold;
+  }
+  .forminput {
+    @apply mt-1 rounded-md border border-yellow-400 p-2 focus:outline-none;
+  }
+  .formerror {
+    @apply mt-1 text-xs text-red-500;
+  }
+}
+
+* {
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  @apply bg-gray-500;
+}
