@@ -30,17 +30,6 @@ const fulfillOrder = async (session) => {
         `success.........., Order ${session.id} added to firebase database`
       );
     });
-  return app
-    .firestore()
-    .collection("users")
-    .doc(session.metadata.email)
-    .collection("orders")
-    .get()
-    .then((res) => {
-      res.forEach((element) => {
-        element.ref.delete();
-      });
-    });
 };
 
 const DeleteCart = async (session) => {

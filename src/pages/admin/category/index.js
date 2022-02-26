@@ -34,9 +34,10 @@ export default function CategoryHome({ categories }) {
 
       <div className="flex flex-wrap items-center justify-between gap-5">
         {categories.map((category) => (
-          <div onClick={() => router.push(`/admin/category/${category.name}`)}>
+          <div>
             <div className="cursor-pointer overflow-hidden">
               <img
+                onClick={() => router.push(`/admin/category/${category.name}`)}
                 src={category.image}
                 className="h-56 w-56 rounded-md object-cover transition-all duration-300 ease-in-out hover:scale-110"
               />
